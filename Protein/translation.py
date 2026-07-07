@@ -1,5 +1,5 @@
 print("==========Translation==========")
-sequence = input("Enter your Sequence:")
+sequence = input("Enter your Sequence:").upper()
 while True:
     if len(sequence) == 0:
         print("Enter a valid Sequence")
