@@ -23,6 +23,6 @@ for i in range(0, len(sequence), 3):
     codon_value = codon_table[codon]
     joiner.append(codon_value)
 
-final = " , ".join(joiner)
+final = " - ".join(joiner)
 final = final.replace("\n" ,"")
 print("The Codons present are:" , final)
