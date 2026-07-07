@@ -11,13 +11,14 @@ base_complement = { "A":"T",
                     "T":"A" ,
                     "C":"G" }
 compliment = []
+
 for base in sequence :
     complement = (base_complement[base])
     compliment.append(complement)
 
-prefinal = compliment[0:]
-final = "".join(prefinal)
-final = final.replace("\n","")
 
-print("Complementary Strand:" , final)
-    
+final = "".join(compliment)
+final = final.replace("\n","")
+rev_final = final[::-1]
+
+print("Complementary Strand:" , rev_final)
