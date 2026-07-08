@@ -1,6 +1,7 @@
+from Utilities.dna_validator import validator
 def transcription():
     print("==========Transcription==========")
-    sequence = input("Enter your Sequence:").upper()
+    sequence = validator()
     while True:
         if len(sequence) == 0:
             print("Please enter a valid sequence")

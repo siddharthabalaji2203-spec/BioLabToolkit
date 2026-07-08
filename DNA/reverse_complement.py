@@ -1,6 +1,8 @@
+from Utilities.dna_validator import validator
+
 def reverse_complement():
-    print("==========Complement Generator==========")
-    sequence = input("Enter your Sequence:").upper()
+    print("==========Reverse Complement Generator==========")
+    sequence = validator()
     while True:
         if len(sequence) == 0:
             print("Please enter a valid sequence")
@@ -22,5 +24,6 @@ def reverse_complement():
     final = final.replace("\n","")
     rev_final = final[::-1]
 
-    print("Complementary Strand:" , rev_final)
+    print("Reverse Complementary Strand:" , rev_final)
+
 

@@ -1,6 +1,7 @@
+from Utilities.dna_validator import validator
 def gc_content():
     print("=========GC Content==========")
-    sequence = input("Enter your Sequence:").upper()
+    sequence = validator()
     while True:
         if len(sequence) == 0:
             print("Please enter a valid sequence")
