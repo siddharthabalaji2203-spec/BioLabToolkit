@@ -1,23 +1,24 @@
-print("==========Complement Generator==========")
-sequence = input("Enter your Sequence:").upper()
-while True:
-    if len(sequence) == 0:
-        print("Please enter a valid sequence")
-        sequence = input("Enter your Sequence:").upper()
-    else:
-        break
-base_complement = { "A":"T",
-                    "G":"C" ,
-                    "T":"A" ,
-                    "C":"G" }
-compliment = []
-for base in sequence :
-    complement = (base_complement[base])
-    compliment.append(complement)
+def complement():
+    print("==========Complement Generator==========")
+    sequence = input("Enter your Sequence:").upper()
+    while True:
+        if len(sequence) == 0:
+            print("Please enter a valid sequence")
+            sequence = input("Enter your Sequence:").upper()
+        else:
+            break
+    base_complement = { "A":"T",
+                        "G":"C" ,
+                        "T":"A" ,
+                        "C":"G" }
+    compliment = []
+    for base in sequence :
+        complement = (base_complement[base])
+        compliment.append(complement)
 
-prefinal = compliment[0:]
-final = "".join(prefinal)
-final = final.replace("\n","")
+    prefinal = compliment[0:]
+    final = "".join(prefinal)
+    final = final.replace("\n","")
 
-print("Complementary Strand:" , final)
+    print("Complementary Strand:" , final)
     
