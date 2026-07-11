@@ -2,6 +2,8 @@ from DNA.complement import complement
 from DNA.fasta_reader import fasta_reader
 from DNA.gc_content import gc_content
 from DNA.reverse_complement import reverse_complement
+from DNA.nucelotide_counter import nucleotide_counter
+from DNA.dna_mutation_detector import dnamutationfinder
 from RNA.transcription import transcription
 from Protein.translation import translation
 
@@ -19,10 +21,12 @@ def display_menu():
     print("  2) GC Content Calculator")
     print("  3) Complement Strand Synthesis")
     print("  4) Reverse Complement Strand Synthesis")
+    print("  5) Nucleotide Counter with Percentage Analysis")
+    print("  6) DNA Mutation Analysis")
     print("RNA:")
-    print("  5) Transcription")
+    print("  7) Transcription")
     print("Protein:")
-    print("  6) Translation")
+    print("  8) Translation")
     print("------------------------------------")
     print("Type the name or number of the tool, or 'quit' to exit.")
 
@@ -33,8 +37,10 @@ TOOL_MAP = {
     "2": gc_content,
     "3": complement,
     "4": reverse_complement,
-    "5": transcription,
-    "6": translation,
+    "5": nucleotide_counter,
+    "6": dnamutationfinder,
+    "7": transcription,
+    "8":translation,
     # Full names (lowercase for matching)
     "fasta reader": fasta_reader,
     "gc content calculator": gc_content,
@@ -42,6 +48,8 @@ TOOL_MAP = {
     "reverse complement strand synthesis": reverse_complement,
     "transcription": transcription,
     "translation": translation,
+    "nucleotide counter": nucleotide_counter,
+    "dna mutation finder": dnamutationfinder
 }
 
 

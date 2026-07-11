@@ -26,4 +26,5 @@ def reverse_complement():
 
     print("Reverse Complementary Strand:" , rev_final)
 
-
+    print("Length of given sequence:" , len(sequence))
+    print("Sequence Analysis Complete")

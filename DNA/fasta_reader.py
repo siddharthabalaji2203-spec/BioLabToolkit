@@ -19,3 +19,5 @@ def fasta_reader():
     print("Sequence:", sequence)
     print()
     print("Length:", length, "bp")
+
+    print("Sequence Analysis Complete")

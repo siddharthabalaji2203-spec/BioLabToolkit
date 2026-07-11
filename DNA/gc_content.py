@@ -24,3 +24,5 @@ def gc_content():
     print("Content of 'C' present:" , c_counter)
     print("Content of 'G' present:" , g_counter)
     print("GC Content:" , final)
+    print("Length of given sequence:" , len(sequence))
+    print("Sequence Analysis Complete")

@@ -23,4 +23,5 @@ def complement():
     final = final.replace("\n","")
 
     print("Complementary Strand:" , final)
-    
+    print("Length of given sequence:" , len(sequence))
+    print("Sequence Analysis Complete")
