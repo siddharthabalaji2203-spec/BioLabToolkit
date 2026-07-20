@@ -1,3 +1,5 @@
+from Utilities.amino_acid_table import codon_table 
+
 def translation():
     print("==========Translation==========")
     sequence = input("Enter your Sequence:").upper()
@@ -7,17 +9,7 @@ def translation():
             sequence = input("Enter your Sequence:")
         else:
             break
-    codon_table = {
-        "AUG": "Methionine or Start",
-        "GCU": "Alanine",
-        "GCC": "Alanine",
-        "GCA": "Alanine",
-        "GCG": "Alanine",
-        "UUU": "Phenylalanine",
-        "UUC": "Phenylalanine",
-        "UUA": "Leucine",
-        "UUG": "Leucine"
-    }
+   
     joiner = []
     for i in range(0, len(sequence), 3):
         codon = sequence[i:i+3]
@@ -27,3 +19,5 @@ def translation():
     final = " - ".join(joiner)
     final = final.replace("\n" ,"")
     print("The Codons present are:" , final)
+
+

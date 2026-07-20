@@ -1,23 +1,33 @@
 def fasta_reader():
+    # Use a dictionary to store header:sequence pairs
+    fasta_dict = {}
+    current_header = None
+
     with open("Data/sample.fasta", "r") as file:
-        lines = file.readlines()
+        for line in file:
+            line = line.strip()
+            if not line:
+                continue  # Skip empty lines
+            
+            if line.startswith(">"):
+                # Track the new gene header
+                current_header = line.replace(">", "")
+                fasta_dict[current_header] = []
+            else:
+                # Append sequence lines to the active gene
+                if current_header:
+                    fasta_dict[current_header].append(line)
 
-    header = lines[0].replace(">", "").strip()
+    print("========== FASTA READER ==========\n")
+    
+    # Loop through and print every gene found
+    for header, seq_list in fasta_dict.items():
+        sequence = "".join(seq_list)
+        length = len(sequence)
+        
+        print(f"Header: {header}")
+        print(f"Sequence: {sequence}")
+        print(f"Length: {length} bp")
+        print("-" * 34)
 
-    sequence_lines = lines[1:]
-
-    sequence = "".join(sequence_lines)
-
-    sequence = sequence.replace("\n", "")
-
-    length = len(sequence)
-
-    print("========== FASTA READER ==========")
-    print()
-    print("Header:", header)
-    print()
-    print("Sequence:", sequence)
-    print()
-    print("Length:", length, "bp")
-
-    print("Sequence Analysis Complete")
+    print("\nSequence Analysis Complete")
